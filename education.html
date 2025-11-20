@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bhavisha</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="education.html" class="logo"><strong>Bhavisha Narendra Chaudhari</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/bhavisha06/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+										<li><a href="https://github.com/Bhavisha-06" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="mailto:bhavisha2705@gmail.com" class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
+										<li><a href="tel:+918983328161" class="icon solid fa-phone"><span class="label">Phone number</span></a></li>									</ul>
+								</header>
+
+							<!-- Content -->
+
+
+							<!--Marks Table-->
+							<section>
+                                    <header class="main">
+										<h1 style="text-decoration: underline; text-decoration-color: #f56a6a;">Education</h1>
+									</header>
+                                    <h4 style="float: right;">May 2022 - June 2026</h4>
+                                    
+                                    <h2>SRM Institute of Science and Technology, Kattankulathur</h2> 
+                                    <h3>B.Tech. Artificial Intelligence</h3>
+                                    <h3>CGPA: 9.53/10 </h3>
+                                    <p>Find subject wise grades <a href = "https://drive.google.com/file/d/1VeU2J3_7IzrnbrgM9PSuDlVjkbytwZeu/view?usp=sharing">here</a></p>
+                                    <!-- <ul class="actions">
+                                        <li><a href="#" id="showGradesBtn" class="button big">Learn More</a></li>
+                                    </ul>
+                                    <hr class="major" />
+
+                                    <div id="gradesAndTool" style="display: none;">
+                                        <hr class="major" />
+
+                                        <h4>Grade to Percentage Key</h4>
+                                        <div class="grade-key">
+                                            <span>**O**: 91-100</span>
+                                            <span>**A+**: 81-90</span>
+                                            <span>**A**: 71-80</span>
+                                            <span>**B+**: 61-70</span>
+                                            <span>**B**: 51-60</span>
+                                            <span>*etc...*</span>
+                                        </div>
+                                        <br>
+
+                                        <h4>Calculate GPA for Selected Subjects</h4>
+                                        <div class="gpa-tool">
+                                            <input type="text" id="subjectSearch" placeholder="Filter subjects (e.g., Mathematics, AI)">
+                                            <button id="calculateGPA" class="button">Calculate Selected GPA</button>
+                                            <div id="result" style="margin-top: 10px;"></div>
+                                        </div>
+
+                                        <h4>Subject-wise Grades</h4>
+                                        <table id="gradesTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Select</th>
+                                                    <th>S.No</th>
+                                                    <th>Subject</th>
+                                                    <th>Grade</th>
+                                                    <th>Credits</th> 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-grade-point="10" data-credits="4"><td><input type="checkbox" class="subject-checkbox"></td><td>1</td><td>Probability and Queuing Theory</td><td>O</td><td>4</td></tr>
+                                                <tr data-grade-point="9" data-credits="3"><td><input type="checkbox" class="subject-checkbox"></td><td>2</td><td>Introduction to AI</td><td>A+</td><td>3</td></tr>
+                                                <tr data-grade-point="10" data-credits="4"><td><input type="checkbox" class="subject-checkbox"></td><td>3</td><td>Data Structures and Algorithms</td><td>O</td><td>4</td></tr>
+                                                <tr data-grade-point="9" data-credits="4"><td><input type="checkbox" class="subject-checkbox"></td><td>4</td><td>Discrete Mathematics</td><td>A+</td><td>4</td></tr>
+                                                <tr data-grade-point="8" data-credits="3"><td><input type="checkbox" class="subject-checkbox"></td><td>5</td><td>Operating Systems</td><td>A</td><td>3</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div> -->
+                                </section>
+
+<style>
+/* Existing CSS for grade-key */
+.grade-key span {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+#gradesTable tbody td:first-child {
+    /* Targets the first cell (the one containing the checkbox) */
+    padding-left: 10px !important; 
+    width: 40px !important; /* Ensure enough width for the checkbox */
+}
+
+/* 💥 NEW CSS FIX for Checkbox Visibility 💥 */
+.subject-checkbox {
+    /* Ensures the checkbox is treated as a visible, physical element */
+    display: inline-block !important; 
+    
+    /* Forces it to be visible even if opacity or visibility is set to hidden */
+    visibility: visible !important; 
+    
+    /* Ensures a standard size */
+    width: 16px !important; 
+    height: 16px !important;
+    
+    /* Remove any margins that might push it out of view */
+    margin: 0;
+}
+.subject-checkbox {
+    /* Ensures the element is a standard visible checkbox */
+    -webkit-appearance: checkbox !important; 
+    -moz-appearance: checkbox !important;
+    appearance: checkbox !important;
+
+    /* Force visibility and size */
+    display: inline-block !important; 
+    visibility: visible !important; 
+    opacity: 1 !important;
+    width: 16px !important; 
+    height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important; /* Prevents position-based hiding */
+}
+
+/* Ensure the table cell has space */
+#gradesTable tbody td:first-child {
+    padding-left: 10px !important; 
+    width: 40px !important; 
+}
+
+/* Deactivate any custom styling/replacement elements on the parent <td> */
+#gradesTable td {
+    position: static !important;
+}
+
+/* Deactivate any pseudo-elements or labels that hide the input */
+#gradesTable td input[type="checkbox"] + label {
+    display: none !important;
+}
+</style>
+
+								
+							
+
+						</div>
+					</div>
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="education.html">Education</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li><a href="achivements.html">Achievements</a></li>
+										<li><a href="experience.html">Work Experience</a></li>
+										<li><a href="certifications.html">Certifications</a></li>
+										<!-- <li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li> -->
+									</ul>
+								</nav>
+
+								<section id="contact">
+								<header class="major">
+								<h2>Contact</h2>
+								</header>
+								Bhavisha Narendra Chaudhari </br>
+								Personal mail: <a href = "mailto: bhavisha2705@gmail.com">bhavisha2705@gmail.com</a></br>
+								University mail: <a href = "mailto: bc2780@srmist.edu.in">bc2780@srmist.edu.in</a></br>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const showGradesBtn = document.getElementById('showGradesBtn');
+    const gradesAndTool = document.getElementById('gradesAndTool');
+    const subjectSearch = document.getElementById('subjectSearch');
+    const gradesTableBody = document.getElementById('gradesTable').getElementsByTagName('tbody')[0];
+    const resultDiv = document.getElementById('result');
+    
+    // RENAME the old button (ID: calculateGPA) and set initial text
+    const toggleSelectionBtn = document.getElementById('calculateGPA'); 
+    toggleSelectionBtn.textContent = 'Select Subjects'; 
+    
+    // Add the "Done" button next to the search bar for the SELECTION phase
+    const doneButtonHtml = '<button id="doneAndCalculate" class="button" style="display:none; margin-left: 10px;">Done & Calculate GPA</button>';
+    toggleSelectionBtn.insertAdjacentHTML('afterend', doneButtonHtml);
+    const doneAndCalculateBtn = document.getElementById('doneAndCalculate');
+
+    // Get all checkboxes
+    const checkboxes = document.querySelectorAll('.subject-checkbox');
+
+    // Initially hide all checkboxes 
+    checkboxes.forEach(cb => cb.style.display = 'none');
+
+
+    // Function to reset controls and restore the view to the "Learn More" state (section visible)
+    function resetControlsAndView() {
+        // 1. ENSURE the grades and tool container is visible
+        gradesAndTool.style.display = 'block'; 
+        
+        // 2. Set the main button text (since the section is visible)
+        showGradesBtn.textContent = 'Hide Grades';
+
+        // 3. Reset all internal controls and table visibility
+        checkboxes.forEach(cb => {
+            cb.style.display = 'none'; // Hide checkboxes
+            cb.checked = false; // Uncheck everything
+        });
+        
+        toggleSelectionBtn.textContent = 'Select Subjects';
+        toggleSelectionBtn.style.display = 'inline-block';
+        doneAndCalculateBtn.style.display = 'none';
+        
+        resultDiv.innerHTML = '';
+        subjectSearch.value = '';
+        subjectSearch.style.display = 'inline-block';
+        
+        document.querySelector('#gradesTable thead').style.display = '';
+
+        const rows = gradesTableBody.getElementsByTagName('tr');
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].style.display = ""; // Show all original rows again
+        }
+    }
+
+
+    // 1. Show/Hide Grades Section (Learn More button)
+    showGradesBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        const isHidden = gradesAndTool.style.display === 'none' || gradesAndTool.style.display === '';
+        if (isHidden) {
+            // SHOW THE SECTION and set controls to initial state
+            resetControlsAndView();
+            
+        } else {
+            // HIDE THE SECTION completely
+            gradesAndTool.style.display = 'none';
+            showGradesBtn.textContent = 'Learn More';
+        }
+    });
+
+    // 2. Toggle Checkbox Visibility (Select Subjects button)
+    toggleSelectionBtn.addEventListener('click', function() {
+        if (toggleSelectionBtn.textContent === 'Select Subjects') {
+            // ACTION: SHOW CHECKBOXES and setup selection
+            checkboxes.forEach(cb => cb.style.display = 'inline-block'); 
+            toggleSelectionBtn.textContent = 'Cancel Selection';
+            doneAndCalculateBtn.style.display = 'inline-block'; 
+            resultDiv.innerHTML = '<em>Select the subjects you want to include in the GPA calculation.</em>';
+
+            const rows = gradesTableBody.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].style.display = ""; // Ensure all rows are visible
+            }
+
+        } else {
+            // ACTION: HIDE CHECKBOXES and reset selection state
+            checkboxes.forEach(cb => {
+                cb.style.display = 'none';
+                cb.checked = false; 
+            });
+            toggleSelectionBtn.textContent = 'Select Subjects';
+            doneAndCalculateBtn.style.display = 'none';
+            resultDiv.innerHTML = '';
+            
+            const rows = gradesTableBody.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].style.display = "";
+            }
+        }
+    });
+
+    // 3. Live Search/Filter functionality (unchanged)
+    subjectSearch.addEventListener('keyup', function() {
+        const query = subjectSearch.value.toLowerCase();
+        const rows = gradesTableBody.getElementsByTagName('tr');
+
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            const subjectCell = row.cells[2].textContent.toLowerCase(); 
+
+            if (subjectCell.includes(query)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        }
+    });
+
+    // 4. "Done & Calculate" Logic
+    doneAndCalculateBtn.addEventListener('click', function() {
+        let totalCredits = 0;
+        let totalGradePoints = 0;
+        let subjectsCount = 0;
+        let selectedSubjectsHtml = '<h4>Selected Subjects:</h4><table class="selected-table"><thead><tr><th>S.No</th><th>Subject</th><th>Grade</th><th>Credits</th></tr></thead><tbody>';
+        let serialNumber = 1;
+
+        const rows = gradesTableBody.getElementsByTagName('tr');
+        
+        // Hide selection controls
+        document.querySelector('#gradesTable thead').style.display = 'none';
+        toggleSelectionBtn.style.display = 'none';
+        doneAndCalculateBtn.style.display = 'none';
+        subjectSearch.style.display = 'none';
+
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            const checkbox = row.querySelector('.subject-checkbox');
+
+            if (checkbox && checkbox.checked) {
+                const gradePoint = parseFloat(row.getAttribute('data-grade-point'));
+                const credits = parseFloat(row.getAttribute('data-credits'));
+                const subjectName = row.cells[2].textContent;
+                const grade = row.cells[3].textContent;
+
+                if (!isNaN(gradePoint) && !isNaN(credits)) {
+                    totalCredits += credits;
+                    totalGradePoints += gradePoint * credits;
+                    subjectsCount++;
+                    
+                    selectedSubjectsHtml += `
+                        <tr>
+                            <td>${serialNumber++}</td>
+                            <td>${subjectName}</td>
+                            <td>${grade}</td>
+                            <td>${credits}</td>
+                        </tr>
+                    `;
+                }
+            } 
+            row.style.display = 'none'; // Hide all original rows during the result view
+        }
+        
+        selectedSubjectsHtml += '</tbody></table>';
+        
+        // Final display logic and the new "Done" button for reset
+        if (totalCredits > 0) {
+            const gpa = totalGradePoints / totalCredits;
+            resultDiv.innerHTML = selectedSubjectsHtml + 
+                                  `<p style="font-weight: bold; font-size: 1.2em; margin-top: 15px;">Calculated GPA for ${subjectsCount} subjects: ${gpa.toFixed(2)}</p>` +
+                                  `<button id="finalDoneBtn" class="button small">Done</button>`;
+        } else {
+            resultDiv.innerHTML = 'No subjects were selected for calculation.' +
+                                  `<button id="finalDoneBtn" class="button small">Done</button>`;
+        }
+        
+        // Add event listener to the newly created "Done" button to reset controls and show the grades table
+        document.getElementById('finalDoneBtn').addEventListener('click', resetControlsAndView);
+    });
+});
+</script>
+
+	</body>
+</html>
